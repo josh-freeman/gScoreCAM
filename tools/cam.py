@@ -64,14 +64,8 @@ class CAMWrapper(object):
         "eigengradcam": EigenGradCAM, # not good for CLIP
         "layercam": LayerCAM,         # sometimes very focus, sometimes very noisy
         "hilacam": hilacam,
-        "groupcam": GroupCAM,         # slightly noiser than gradcam
-        "sscam1": SSCAM1,             # doesn't work for clip, extremly slow
-        "sscam2": SSCAM2,             # doesn't work for clip, extremly slow
-        "testhila": HilaCAM,
-        "gscorecam": GScoreCAM,
-        "rise": RiseCAM,
-        "gscorecambeta": GScoreCAMBeta,
-        "testcam": TestCAM,
+        "gscorecam": GScoreCAM
+
     }
     def __init__(self, model, target_layers, tokenizer, cam_version, preprocess=None, target_category=None, is_clip=True,
                  mute=False, cam_trans=None, is_transformer=False, **kwargs):
